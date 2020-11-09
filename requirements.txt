@@ -20,7 +20,7 @@ bitarray @ file:///C:/ci/bitarray_1603192297813/work
 bleach @ file:///tmp/build/80754af9/bleach_1600439572647/work
 bokeh @ file:///C:/ci/bokeh_1603297934731/work
 brotlipy==0.7.0
-certifi==2020.6.20
+certifi==2020.11.8
 cffi @ file:///C:/ci/cffi_1600699246375/work
 chardet==3.0.4
 click==7.1.2
