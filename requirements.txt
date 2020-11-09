@@ -1,6 +1,4 @@
 alabaster==0.7.12
-anaconda-client==1.7.2
-anaconda-navigator==1.10.0
 argon2-cffi @ file:///C:/ci/argon2-cffi_1596828585465/work
 asn1crypto @ file:///tmp/build/80754af9/asn1crypto_1596577642040/work
 astroid @ file:///C:/ci/astroid_1592487315634/work
@@ -28,10 +26,6 @@ cloudpickle @ file:///tmp/build/80754af9/cloudpickle_1598884132938/work
 clyent==1.2.2
 colorama @ file:///tmp/build/80754af9/colorama_1603211150991/work
 comtypes==1.1.7
-conda==4.9.1
-conda-build==3.20.5
-conda-package-handling @ file:///C:/ci/conda-package-handling_1603003327818/work
-conda-verify==3.4.2
 contextlib2==0.6.0.post1
 cryptography @ file:///C:/ci/cryptography_1601046905460/work
 cycler==0.10.0
