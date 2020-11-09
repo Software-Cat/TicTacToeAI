@@ -106,7 +106,7 @@ packaging==20.4
 pandas @ file:///C:/ci/pandas_1602083338010/work
 pandocfilters==1.4.2
 paramiko @ file:///tmp/build/80754af9/paramiko_1598886428689/work
-parso==0.7.0
+parso==0.8.0
 partd==1.1.0
 path @ file:///C:/ci/path_1598358556930/work
 patsy==0.5.1
