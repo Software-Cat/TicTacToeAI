@@ -33,6 +33,20 @@ class TestLogic(TKinterTestCase):
         self.assertNotEqual(
             game.matrix[0][0]["text"], game.matrix[1][1]["text"])
 
+    def test_win_condition(self):
+        game = main.Game(self.root)
+
+        game.matrix[0][0].invoke()
+        game.matrix[0][1].invoke()
+        game.matrix[0][2].invoke()
+        game.matrix[1][0].invoke()
+        game.matrix[1][1].invoke()
+        game.matrix[1][2].invoke()
+        game.matrix[2][0].invoke()
+        self.pump_events()
+
+        self.assertNotEqual(game.detect_win(), game.GridState.NULL)
+
 
 class TestButtons(TKinterTestCase):
     def test_button_num(self):
