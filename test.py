@@ -45,7 +45,7 @@ class TestLogic(TKinterTestCase):
         game.matrix[2][0].invoke()
         self.pump_events()
 
-        self.assertNotEqual(game.detect_win(), game.GridState.NULL)
+        self.assertNotEqual(game.detect_win(), game.State.NULL)
 
 
 class TestButtons(TKinterTestCase):
@@ -70,5 +70,5 @@ class TestButtons(TKinterTestCase):
                 game.matrix[column][row].invoke()
                 self.pump_events()
 
-                self.assertEqual(currentTurn, game.GridState(
+                self.assertEqual(currentTurn, game.State(
                     game.matrix[column][row]["text"]))
