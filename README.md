@@ -1,2 +1,3 @@
 # TicTacToeAI
-Tic Tac Toe AI that calculates all possible future outcomes to make the best move.
+
+A variety of Tic Tac Toe AIs each with different strategies to win.
