@@ -22,16 +22,39 @@ class TKinterTestCase(unittest.TestCase):
             pass
 
 
+class TestLogic(TKinterTestCase):
+    def test_turn_switch(self):
+        game = main.Game(self.root)
+
+        game.matrix[0][0].invoke()
+        game.matrix[1][1].invoke()
+        self.pump_events()
+
+        self.assertNotEqual(
+            game.matrix[0][0]["text"], game.matrix[1][1]["text"])
+
+
 class TestButtons(TKinterTestCase):
     def test_button_num(self):
         game = main.Game(self.root)
 
-        self.pump_events()
+        self.assertEqual(len(game.matrix), 3)
+        self.assertEqual(len(game.matrix[0]), 3)
+        self.assertEqual(len(game.matrix[1]), 3)
+        self.assertEqual(len(game.matrix[2]), 3)
 
-        self.assertEqual(len(game.grid), 3)
-        self.assertEqual(len(game.grid[0]), 3)
-        self.assertEqual(len(game.grid[1]), 3)
-        self.assertEqual(len(game.grid[2]), 3)
+        for row in range(3):
+            for column in range(3):
+                self.assertIsInstance(game.matrix[column][row], tk.Button)
 
     def test_button_press(self):
-        pass
+        for row in range(3):
+            for column in range(3):
+                game = main.Game(self.root)
+                currentTurn = game.turn
+
+                game.matrix[column][row].invoke()
+                self.pump_events()
+
+                self.assertEqual(currentTurn, game.GridState(
+                    game.matrix[column][row]["text"]))
